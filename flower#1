@@ -1,0 +1,29 @@
+import turtle
+def drawDiamond(brad):
+    for x in range(4):
+        brad.forward(70)
+        if (x % 2) == 0:
+            brad.right(45)
+        else:
+            brad.right(135)
+def drawArt():
+    brad = turtle.Turtle()
+    window = turtle.Screen()
+    window.bgcolor("green")
+    brad.color("orange")
+    brad.shape("turtle")
+    brad.speed(100)
+    shapeCount = 72
+    
+    for x in range(shapeCount):
+        drawDiamond(brad)
+        brad.right(360/shapeCount)
+    brad.right(90)
+    brad.forward(225)
+    brad.right(110)
+    drawDiamond(brad)
+    brad.right(95)
+    drawDiamond(brad)
+    brad.right(155)
+    brad.forward(100)
+drawArt()
